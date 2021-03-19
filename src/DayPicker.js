@@ -1,19 +1,24 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Wrapper from "./Wrapper";
+import Wrapper from './Wrapper';
 
 // Check MonthPicker for comments
 const DayPicker = (props) => {
-  const { ...inheritedProps } = props;
+  const { className, ...inheritedProps } = props;
 
   const onPrevious = () =>
-    props.onChange(props.selected.subtract(1, "day").clone());
-  const onNext = () => props.onChange(props.selected.add(1, "day").clone());
+    props.onChange(props.selected.subtract(1, 'day').clone());
+  const onNext = () => props.onChange(props.selected.add(1, 'day').clone());
 
   return (
-    <Container controls={props.controls}>
-      <Wrapper onPrevious={onPrevious} onNext={onNext} {...inheritedProps} />
+    <Container className={className} controls={props.controls}>
+      <Wrapper
+        dateFormat="dd.MM.yyyy"
+        onPrevious={onPrevious}
+        onNext={onNext}
+        {...inheritedProps}
+      />
     </Container>
   );
 };
@@ -25,8 +30,8 @@ const Container = styled.div`
 
   input {
     & {
-      max-width: 180px;
-      padding-right: 35px;
+      width: 160px;
+      padding-right: 30px;
       text-align: center;
     }
   }

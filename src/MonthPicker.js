@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Wrapper from "./Wrapper";
+import Wrapper from './Wrapper';
 
 const MonthPicker = (props) => {
   const { ...inheritedProps } = props;
@@ -9,12 +9,18 @@ const MonthPicker = (props) => {
   // Add some handlers. Clone is required because otherwise the same reference
   // is kept
   const onPrevious = () =>
-    props.onChange(props.selected.subtract(1, "month").clone());
-  const onNext = () => props.onChange(props.selected.add(1, "month").clone());
+    props.onChange(props.selected.subtract(1, 'month').clone());
+  const onNext = () => props.onChange(props.selected.add(1, 'month').clone());
 
   return (
     <Container controls={props.controls}>
-      <Wrapper onPrevious={onPrevious} onNext={onNext} {...inheritedProps} />
+      <Wrapper
+        dateFormat="MMM yyyy"
+        showMonthYearPicker
+        onPrevious={onPrevious}
+        onNext={onNext}
+        {...inheritedProps}
+      />
     </Container>
   );
 };
@@ -26,8 +32,8 @@ const Container = styled.div`
 
   input {
     & {
-      max-width: 180px;
-      padding-right: 35px;
+      width: 170px;
+      padding-right: 30px;
       text-align: center;
     }
   }

@@ -49,17 +49,20 @@ const Container = styled.div`
   display: inline-block;
 
   input {
+    width: 110px;
     color: #163979;
-    ${(props) => (props.controls ? 'padding: 8px' : 'padding: 8px')};
+    padding: 8px;
 
     font-size: 14px;
     border-radius: 4px;
     border: 1px solid #aeaeae;
     line-height: 16px;
     // prettier-ignore
-    background: white url("${calendar}")
-      ${(props) => (props.controls ? '78%' : '85%')} 50% / 16px 16px no-repeat;
-    width: ${(props) => (props.controls ? '190px' : '120px')};
+    background: white url("${calendar}");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: right ${(props) => (props.controls ? '30px' : '7px')}
+      center;
   }
 `;
 

@@ -1,4 +1,6 @@
+import TimePicker from './TimePicker';
 import DayPicker from './DayPicker';
 import MonthPicker from './MonthPicker';
+import Wrapper from './Wrapper';
 
-export { DayPicker, MonthPicker };
+export { TimePicker, DayPicker, MonthPicker, Wrapper as DatePicker };
