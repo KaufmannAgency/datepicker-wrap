@@ -19,14 +19,19 @@ const Wrapper = (props) => {
     controls,
     onPrevious,
     onNext,
+    minTime,
+    maxTime,
+    width,
     ...inheritedProps
   } = props;
 
   return (
-    <Container controls={controls}>
+    <Container width={width} controls={controls}>
       <DatePicker
         selected={selected && selected.toDate()}
         onChange={(date) => onChange(moment(date))}
+        minTime={minTime ? minTime.toDate() : null}
+        maxTime={maxTime ? maxTime.toDate() : null}
         {...inheritedProps}
       />
       {controls && (
@@ -49,7 +54,7 @@ const Container = styled.div`
   display: inline-block;
 
   input {
-    width: 110px;
+    width: ${(props) => props.width || '110px'};
     color: #163979;
     padding: 8px;
 
