@@ -51,7 +51,6 @@ const Wrapper = (props) => {
 
 const Container = styled.div`
   position: relative;
-  display: inline-block;
 
   input {
     width: ${(props) => props.width || '110px'};
