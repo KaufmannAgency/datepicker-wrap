@@ -22,14 +22,22 @@ const Wrapper = (props) => {
     minTime,
     maxTime,
     width,
+    invalid,
     ...inheritedProps
   } = props;
 
   return (
-    <Container width={width} controls={controls}>
+    <Container width={width} controls={controls} invalid={invalid}>
       <DatePicker
-        selected={selected && selected.toDate()}
-        onChange={(date) => onChange(moment(date))}
+        selected={selected && selected.isValid() && selected.toDate()}
+        onChange={(date) => {
+          const mDate = moment(date);
+          if (mDate.isValid()) {
+            onChange(moment(date));
+          } else {
+            console.debug(`Entered date '${date}' is invalid`);
+          }
+        }}
         minTime={minTime ? minTime.toDate() : null}
         maxTime={maxTime ? maxTime.toDate() : null}
         {...inheritedProps}
@@ -59,7 +67,7 @@ const Container = styled.div`
 
     font-size: 14px;
     border-radius: 4px;
-    border: 1px solid #aeaeae;
+    border: 1px solid ${(props) => (props.invalid ? 'red' : '#aeaeae')};
     line-height: 16px;
     // prettier-ignore
     background: white url("${calendar}");
