@@ -62,16 +62,17 @@ const Container = styled.div`
 
   input {
     width: ${(props) => props.width || '110px'};
-    color: #163979;
+    color: #313131;
     padding: 8px;
+    padding-left: 15px;
 
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 4px;
     border: 1px solid ${(props) => (props.invalid ? 'red' : '#aeaeae')};
     line-height: 16px;
     // prettier-ignore
     background: white url("${calendar}");
-    background-size: 16px 16px;
+    background-size: 24px 24px;
     background-repeat: no-repeat;
     background-position: right ${(props) => (props.controls ? '30px' : '7px')}
       center;

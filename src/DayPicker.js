@@ -30,9 +30,9 @@ const Container = styled.div`
 
   input {
     & {
-      width: 160px;
+      width: 220px;
       padding-right: 30px;
-      text-align: center;
+      // text-align: center;
     }
   }
 `;
