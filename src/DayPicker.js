@@ -30,7 +30,8 @@ const Container = styled.div`
 
   input {
     & {
-      width: 220px;
+      width: ${(p) => (p.controls ? '180px' : '145px')};
+      padding-left: ${(p) => (p.controls ? '30px' : '15px')};
       padding-right: 30px;
       // text-align: center;
     }

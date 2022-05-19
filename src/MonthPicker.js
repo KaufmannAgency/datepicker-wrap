@@ -32,9 +32,9 @@ const Container = styled.div`
 
   input {
     & {
-      width: 170px;
       padding-right: 30px;
-      text-align: center;
+      width: ${(p) => (p.controls ? '190px' : '140px')};
+      padding-left: ${(p) => (p.controls ? '35px' : '10px')};
     }
   }
 
