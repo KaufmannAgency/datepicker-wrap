@@ -16,7 +16,9 @@ const StyledDayPicker = styled(DayPicker)`
 
   input {
     & {
-      width: 120px;
+      width: ${(p) => (p.controls ? '220px' : '180px')};
+      padding-left: ${(p) => (p.controls ? '30px' : '10px')};
+
       // text-align: center;
       // We need the " instead of ' so disable prettier for this
       // prettier-ignore

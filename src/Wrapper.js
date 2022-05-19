@@ -29,7 +29,12 @@ const Wrapper = (props) => {
   return (
     <Container width={width} controls={controls} invalid={invalid}>
       <DatePicker
-        selected={selected && selected.isValid() && selected.toDate()}
+        selected={
+          selected &&
+          selected.isValid &&
+          selected.isValid() &&
+          selected.toDate()
+        }
         onChange={(date) => {
           const mDate = moment(date);
           if (mDate.isValid()) {
@@ -81,7 +86,7 @@ const Container = styled.div`
 
 const ArrowContainer = styled.div`
   position: absolute;
-  top: 0;
+  top: 3px;
   height: 34px;
   width: 30px;
   border-radius: 4px;
