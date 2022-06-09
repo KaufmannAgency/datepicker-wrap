@@ -5,18 +5,23 @@ import DayPicker from './DayPicker';
 
 import clock from './assets/clock.svg';
 
-const TimePicker = (props) => (
-  <StyledDayPicker showTimeSelect dateFormat="dd.MM.yyyy HH.mm" {...props} />
+const HourPicker = (props) => (
+  <StyledDayPicker
+    showTimeSelect
+    showTimeSelectOnly
+    dateFormat="HH.mm"
+    {...props}
+  />
 );
 
 const StyledDayPicker = styled(DayPicker)`
   .react-datepicker-popper {
-    min-width: 350px;
+    min-width: 150px;
   }
 
   input {
     & {
-      width: ${(p) => (p.controls ? '220px' : '180px')};
+      width: ${(p) => (p.controls ? '140px' : '100px')};
       padding-left: ${(p) => (p.controls ? '30px' : '15px')};
 
       // text-align: center;
@@ -31,4 +36,4 @@ const StyledDayPicker = styled(DayPicker)`
   }
 `;
 
-export default TimePicker;
+export default HourPicker;

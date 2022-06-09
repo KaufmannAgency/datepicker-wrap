@@ -34,7 +34,7 @@ const Container = styled.div`
     & {
       padding-right: 30px;
       width: ${(p) => (p.controls ? '190px' : '140px')};
-      padding-left: ${(p) => (p.controls ? '35px' : '10px')};
+      padding-left: ${(p) => (p.controls ? '30px' : '15px')};
     }
   }
 
