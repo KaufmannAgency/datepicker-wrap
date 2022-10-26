@@ -6,7 +6,7 @@ import DayPicker from './DayPicker';
 import clock from './assets/clock.svg';
 
 const TimePicker = (props) => (
-  <StyledDayPicker showTimeSelect dateFormat="dd.MM.yyyy HH.mm" {...props} />
+  <StyledDayPicker dateFormat="dd.MM.yyyy H.mm" {...props} />
 );
 
 const StyledDayPicker = styled(DayPicker)`

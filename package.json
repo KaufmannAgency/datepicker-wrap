@@ -1,7 +1,7 @@
 {
   "name": "datepicker-wrap",
-  "version": "1.4.1",
-  "description": "Moment.js wrapper for react-datepicker v3",
+  "version": "1.4.2",
+  "description": "Moment.js wrapper for react-datepicker v4",
   "files": [
     "dist"
   ],
