@@ -6,7 +6,12 @@ import DayPicker from './DayPicker';
 import clock from './assets/clock.svg';
 
 const TimePicker = (props) => (
-  <StyledDayPicker dateFormat="dd.MM.yyyy H.mm" {...props} />
+  <StyledDayPicker
+    dateFormat="dd.MM.yyyy 'klo' H.mm"
+    timeCaption="Aika"
+    {...props}
+    showTimeSelect
+  />
 );
 
 const StyledDayPicker = styled(DayPicker)`
@@ -16,8 +21,8 @@ const StyledDayPicker = styled(DayPicker)`
 
   input {
     & {
-      width: ${(p) => (p.controls ? '220px' : '180px')};
-      padding-left: ${(p) => (p.controls ? '30px' : '15px')};
+      width: 210px;
+      padding-left: 15px;
 
       // text-align: center;
       // We need the " instead of ' so disable prettier for this
@@ -25,8 +30,7 @@ const StyledDayPicker = styled(DayPicker)`
       background: white url("${clock}");
       background-size: 24px 24px;
       background-repeat: no-repeat;
-      background-position: right ${(props) => (props.controls ? '30px' : '7px')}
-        center;
+      background-position: right 7px center;
     }
   }
 `;
