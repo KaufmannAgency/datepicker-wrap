@@ -21,7 +21,7 @@ const StyledDayPicker = styled(DayPicker)`
 
   input {
     & {
-      width: 210px;
+      width: ${(props) => props.width || '210px'};
       padding-left: 15px;
 
       // text-align: center;
