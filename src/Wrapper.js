@@ -23,6 +23,9 @@ const Wrapper = (props) => {
     maxTime,
     width,
     invalid,
+    startDate,
+    endDate,
+    minDate,
     ...inheritedProps
   } = props;
 
@@ -45,6 +48,9 @@ const Wrapper = (props) => {
         }}
         minTime={minTime ? minTime.toDate() : null}
         maxTime={maxTime ? maxTime.toDate() : null}
+        startDate={startDate ? startDate.toDate() : null}
+        endDate={endDate ? endDate.toDate() : null}
+        minDate={minDate ? minDate.toDate() : null}
         {...inheritedProps}
       />
       {controls && (
@@ -66,10 +72,10 @@ const Container = styled.div`
   position: relative;
 
   input {
-    width: ${(props) => props.width || '110px'};
-    color: #313131;
+    width: ${(props) => props.width || '136px'};
+    color: #1f3875;
     padding: 8px;
-    padding-left: 15px;
+    padding-left: 40px;
 
     font-size: 16px;
     border-radius: 4px;
@@ -77,9 +83,9 @@ const Container = styled.div`
     line-height: 16px;
     // prettier-ignore
     background: white url("${calendar}");
-    background-size: 24px 24px;
+    background-size: 16px 16px;
     background-repeat: no-repeat;
-    background-position: right ${(props) => (props.controls ? '30px' : '7px')}
+    background-position: left ${(props) => (props.controls ? '30px' : '11px')}
       center;
   }
 `;
