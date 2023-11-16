@@ -26,6 +26,7 @@ const Wrapper = (props) => {
     startDate,
     endDate,
     minDate,
+    maxDate,
     ...inheritedProps
   } = props;
 
@@ -51,6 +52,7 @@ const Wrapper = (props) => {
         startDate={startDate ? startDate.toDate() : null}
         endDate={endDate ? endDate.toDate() : null}
         minDate={minDate ? minDate.toDate() : null}
+        maxDate={maxDate ? maxDate.toDate() : null}
         {...inheritedProps}
       />
       {controls && (
