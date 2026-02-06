@@ -1,6 +1,6 @@
 {
   "name": "datepicker-wrap",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Moment.js wrapper for react-datepicker v4",
   "files": [
     "dist"
@@ -26,9 +26,9 @@
   "peerDependencies": {
     "date-fns": ">=2",
     "moment": ">=2",
-    "react": ">=17 || >=18",
-    "react-datepicker": ">=4 || >=3",
-    "react-dom": ">=17 || >=18",
+    "react": ">=17 || >=18 || >=19",
+    "react-datepicker": ">=3",
+    "react-dom": ">=17 || >=18 || >=19",
     "styled-components": ">=5"
   },
   "devDependencies": {

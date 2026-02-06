@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
 import DatePicker, { registerLocale, setDefaultLocale } from 'react-datepicker';
-import fi from 'date-fns/locale/fi';
+import { fi } from 'date-fns/locale/fi';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import arrowRight from './assets/arrow_right.svg';
